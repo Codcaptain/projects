@@ -1,0 +1,48 @@
+<mvc:View controllerName="com.odataapp.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Shell id="shell">
+        <Page id="page" title="{i18n&gt;title}">
+            			<content>
+				<List id="idListEmp" items="{/Invoices}" headerText="Invoices" mode="SingleSelectMaster" selectionChange="onSelEmp">
+					<headerToolbar>
+						<Toolbar>
+							<Text text="Invoices" class="sapMH3FontSize"></Text>
+							<ToolbarSpacer></ToolbarSpacer><!-- <SearchField width="60%" liveChange="onSearchEmp"></SearchField> -->
+							<Button icon="sap-icon://sort-ascending" press="sortAsc" type="Accept" width="20%"></Button>
+							<Button icon="sap-icon://sort-descending" press="sortDesc" type="Accept" width="20%"></Button>
+						</Toolbar>
+					</headerToolbar>
+					<ObjectListItem title="{ContactName}" number="{ShipperName}" numberUnit="{CustomerID}">
+						<attributes>
+							<ObjectAttribute title="ShipName" text="{ShipName}"></ObjectAttribute>
+							<ObjectAttribute title="ShipAddress" text="{ShipAddress}"></ObjectAttribute>
+							<ObjectAttribute title="ShipCity" text="{ShipCity}"></ObjectAttribute>
+							<ObjectAttribute title="ShipRegion" text="{ShipRegion}"></ObjectAttribute>
+							<ObjectAttribute title="ShipPostalCode" text="{ShipPostalCode}"></ObjectAttribute>
+							<ObjectAttribute title="ShipCountry" text="{ShipCountry}"></ObjectAttribute>
+							<ObjectAttribute title="Address" text="{Address}"></ObjectAttribute>
+							<ObjectAttribute title="City" text="{City}"></ObjectAttribute>
+							<ObjectAttribute title="Region" text="{Region}"></ObjectAttribute>
+							<ObjectAttribute title="Region" text="{Region}"></ObjectAttribute>
+							<ObjectAttribute title="PostalCode" text="{PostalCode}"></ObjectAttribute>
+							<ObjectAttribute title="Country" text="{Country}"></ObjectAttribute>
+							<ObjectAttribute title="Salesperson" text="{Salesperson}"></ObjectAttribute>
+							<ObjectAttribute title="OrderID" text="{OrderID}"></ObjectAttribute>
+							<ObjectAttribute title="OrderID" text="{OrderID}"></ObjectAttribute>
+							<ObjectAttribute title="RequiredDate" text="{RequiredDate}"></ObjectAttribute>
+							<ObjectAttribute title="ShippedDate" text="{ShippedDate}"></ObjectAttribute>
+							<ObjectAttribute title="ProductID" text="{ProductID}"></ObjectAttribute>
+							<ObjectAttribute title="ProductName" text="{ProductName}"></ObjectAttribute>
+							<ObjectAttribute title="UnitPrice" text="{UnitPrice}"></ObjectAttribute>
+							<ObjectAttribute title="Quantity" text="{Quantity}"></ObjectAttribute>
+							<ObjectAttribute title="Discount" text="{Discount}"></ObjectAttribute>
+							<ObjectAttribute title="ExtendedPrice" text="{ExtendedPrice}"></ObjectAttribute>
+						</attributes>
+						<firstStatus>
+							<ObjectStatus title="Freight" text="{Freight}"></ObjectStatus>
+						</firstStatus>
+					</ObjectListItem>
+				</List>
+			</content>
+	</Page>
+    </Shell>
+</mvc:View>
